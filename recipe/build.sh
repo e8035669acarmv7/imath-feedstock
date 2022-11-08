@@ -15,6 +15,9 @@ cmake_args=(
 )
 
 if [[ $(uname) == "Linux" ]]; then
+      # Avoid issue with PRIx64 macro (cf https://stackoverflow.com/questions/52715250)
+      CXXFLAGS="$CXXFLAGS -D__STDC_FORMAT_MACROS"
+
       # This helps a test program link.
       cmake_args+=(
             -DCMAKE_EXE_LINKER_FLAGS="$LDFLAGS -Wl,--no-as-needed -lrt"
