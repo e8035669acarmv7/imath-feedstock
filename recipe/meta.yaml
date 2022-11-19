@@ -14,7 +14,6 @@ source:
 
 build:
   number: 1
-  skip: true  # [win and vc<14]
   run_exports:
     # Not yet on ABI Laboratory, but extrapolating from IlmBase:
     - {{ pin_subpackage(name|lower, max_pin='x.x') }}
