@@ -13,7 +13,7 @@ source:
     - macos-portability.patch  # [osx]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     # Not yet on ABI Laboratory, but extrapolating from IlmBase:
