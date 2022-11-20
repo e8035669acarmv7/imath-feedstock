@@ -13,8 +13,7 @@ source:
     - macos-portability.patch  # [osx]
 
 build:
-  number: 0
-  skip: true  # [win and vc<14]
+  number: 1
   run_exports:
     # Not yet on ABI Laboratory, but extrapolating from IlmBase:
     - {{ pin_subpackage(name|lower, max_pin='x.x') }}
@@ -36,6 +35,7 @@ test:
     - if not exist %LIBRARY_PREFIX%\include\Imath\half.h exit 1       # [win]
     - if not exist %LIBRARY_PREFIX%\include\Imath\ImathMath.h exit 1  # [win]
     - if not exist %LIBRARY_PREFIX%\lib\Imath.lib exit 1              # [win]
+    - if not exist %PREFIX%\\Library\lib\pkgconfig\Imath.pc exit 1    # [win]
 
 about:
   home: http://www.openexr.com/
