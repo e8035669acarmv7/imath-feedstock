@@ -35,6 +35,9 @@ test:
     - if not exist %LIBRARY_PREFIX%\include\Imath\half.h exit 1       # [win]
     - if not exist %LIBRARY_PREFIX%\include\Imath\ImathMath.h exit 1  # [win]
     - if not exist %LIBRARY_PREFIX%\lib\Imath.lib exit 1              # [win]
+    - if not exist %PREFIX%\\Library\lib\pkgconfig\Imath.pc exit 1    # [win]
+    # Manually inspect pc file. remove after manual testing complete
+    - type %PREFIX%\\Library\lib\pkgconfig\Imath.pc   # [win]
 
 about:
   home: http://www.openexr.com/
