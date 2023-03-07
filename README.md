@@ -1,11 +1,11 @@
-About imath
-===========
+About imath-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/imath-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.openexr.com/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/imath-feedstock/blob/main/LICENSE.txt)
 
 Summary: IMath libraries required for OpenEXR.
 

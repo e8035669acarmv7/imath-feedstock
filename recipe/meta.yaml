@@ -1,6 +1,6 @@
 {% set name = "Imath" %}
-{% set version = "3.1.6" %}
-{% set sha256 = "ea5592230f5ab917bea3ceab266cf38eb4aa4a523078d46eac0f5a89c52304db" %}
+{% set version = "3.1.7" %}
+{% set sha256 = "bff1fa140f4af0e7f02c6cb78d41b9a7d5508e6bcdfda3a583e35460eb6d4b47" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
     - macos-portability.patch  # [osx]
 
 build:
-  number: 1
+  number: 0
   run_exports:
     # Not yet on ABI Laboratory, but extrapolating from IlmBase:
     - {{ pin_subpackage(name|lower, max_pin='x.x') }}
