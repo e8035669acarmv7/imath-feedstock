@@ -1,8 +1,8 @@
 diff --git a/src/ImathTest/CMakeLists.txt b/src/ImathTest/CMakeLists.txt
-index 19a630a525..709a32385f 100644
+index 5882031..f752bd5 100644
 --- a/src/ImathTest/CMakeLists.txt
 +++ b/src/ImathTest/CMakeLists.txt
-@@ -70,11 +70,7 @@ if(NOT "${CMAKE_PROJECT_NAME}" STREQUAL "ImathTest")
+@@ -71,12 +71,7 @@ if(NOT "${CMAKE_PROJECT_NAME}" STREQUAL "ImathTest")
  
  endif()
  
@@ -11,6 +11,7 @@ index 19a630a525..709a32385f 100644
 -RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
 -)
 -target_link_libraries(ImathHalfPerfTest Imath::Imath)
+-add_test(NAME Imath.half_perf_test COMMAND $<TARGET_FILE:ImathHalfPerfTest>)
 +# ImathHalfPerfTest not usable on macOS (no CLOCK_MONOTONIC)
  
  function(DEFINE_IMATH_TESTS)
